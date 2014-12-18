@@ -103,7 +103,7 @@ func boolToInt(b bool) int {
 func showBanner() {
 
 	fmt.Fprintf(os.Stdout, "--------------------------------------------------------------------------------\n")
-	fmt.Fprintf(os.Stdout, "  ESRI ASCII raster data file parser (v%s)\n", appVersion)
+	fmt.Fprintf(os.Stdout, "  esri-ascii-parser: ESRI ASCII raster data file parser (v%s)\n", appVersion)
 	fmt.Fprintf(os.Stdout, "  validate and parse file to console, file, or database\n")
 	fmt.Fprintf(os.Stdout, "--------------------------------------------------------------------------------\n\n")
 
