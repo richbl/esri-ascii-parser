@@ -33,7 +33,7 @@ Here's the default response when running esri-ascii-parser with no parameters:
     richbl@main:~$ esri-ascii-parser
 ```
 --------------------------------------------------------------------------------
-  ESRI ASCII raster data file parser (v0.10)
+  esri-ascii-parser: ESRI ASCII raster data file parser (v0.10)
   validate and parse file to console, file, or database
 --------------------------------------------------------------------------------
 -in must be set to a fully qualified pathname for input
