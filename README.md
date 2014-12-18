@@ -19,11 +19,11 @@ To meet the Go-SQL-Driver package dependency, install the package into your Go e
 
 	richbl@main:/go/src$ go get github.com/github.com/go-sql-driver/mysql
 
-Similarly, install this esri_ascii_parser package into the Go environment:
+Similarly, install this esri-ascii-parser package into the Go environment:
 
-	richbl@main:/go/src$ go get github.com/richbl/esri_ascii_parser
+	richbl@main:/go/src$ go get github.com/richbl/esri-ascii-parser
 	
-Both package sources should be viewable under the $GOPATH/src folder (e.g., /go/src/github.com/richbl/esri_ascii_parser).
+Both package sources should be viewable under the $GOPATH/src folder (e.g., /go/src/github.com/richbl/esri-ascii-parser).
 	
 ## Basic Usage
 EsriASCIIParser is run through a command-line interface (CLI), so all of the command options are made available there.
@@ -46,7 +46,7 @@ Current settings:
   -name=region
 
 Usage:
-  esri_ascii_parser (-in="</path/to/esri_file>") [-out="</path/to/file.out">]
+  esri-ascii-parser (-in="</path/to/esri_file>") [-out="</path/to/file.out">]
     [-dev=<"con">, <"file">, <"db">]
     [-db="[username[:password]@][protocol[(address)]]/dbname"]
     [-name=<"region">]
@@ -59,10 +59,10 @@ Options:
   -out="/tmp/file.out": file to persist parsed results (used when -dev=file)
 
 Examples:
-  esri_ascii_parser -in=/abc.asc
-  esri_ascii_parser -in=/abc.asc -dev=con,file
-  esri_ascii_parser -in=/abc.asc -dev=file -out=/tmp/results.out
-  esri_ascii_parser -in=/abc.asc -dev=db -db=usr:pwd@tcp(10.10.10.1:3306)/db
+  esri-ascii-parser -in=/abc.asc
+  esri-ascii-parser -in=/abc.asc -dev=con,file
+  esri-ascii-parser -in=/abc.asc -dev=file -out=/tmp/results.out
+  esri-ascii-parser -in=/abc.asc -dev=db -db=usr:pwd@tcp(10.10.10.1:3306)/db
 ```
 The utility responses by indicating that the -in parameter must be set to a file to be parsed (otherwise, what's the point if the input file is null, really).
 
