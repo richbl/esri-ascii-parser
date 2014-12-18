@@ -1,30 +1,36 @@
-EsriASCIIParser
-==
+## EsriASCIIParser
+A CLI utility written in Go to validate and parse ESRI ASCII raster data file to various devices (i.e., console, file, database).
 
-CLI utility written in Go to validate and parse ESRI ASCII raster data file to various devices (i.e., console, file, database).
-
-For format details, see the ESRI ASCII raster data format specification reference:
+For file format details, see the ESRI ASCII raster data format specification reference:
 http://resources.esri.com/help/9.3/ArcGISDesktop/com/Gp_ToolRef/Spatial_Analyst_Tools/esri_ascii_raster_format.htm
 
-Requirements
---
+## Requirements
 + Go language distribution
     + Install through your OS package system or go here: https://golang.org/dl/
 +  Supplemental Go packages:
-    +  Go-SQL-Driver (http://github.com/go-sql-driver/mysql)
+    +  Go-SQL-Driver package (http://github.com/go-sql-driver/mysql)
 +  Operational database (if persisting to a database, dev=db)
     + See MySQL DDL project sample (test_world_create.sql)
     
 While this package was written and tested under Linux (Ubuntu 14.04 LTS), there should be no reason why this won't work just fine under other operating systems. 
 
-Basic Usage
---
+## Installation
+To meet the Go-SQL-Driver package dependency, install the package into your Go environment ([$GOPATH](http://code.google.com/p/go-wiki/wiki/GOPATH "GOPATH")) using the [go tool](http://golang.org/cmd/go/ "go command"):
+
+	richbl@main:/go/src$ go get github.com/github.com/go-sql-driver/mysql
+
+Similarly, install this esri_ascii_parser package into the Go environment:
+
+	richbl@main:/go/src$ go get github.com/richbl/esri_ascii_parser
+	
+Both package sources should be viewable under the $GOPATH/src folder (e.g., /go/src/github.com/richbl/esri_ascii_parser).
+	
+## Basic Usage
 EsriASCIIParser is run through a command-line interface (CLI), so all of the command options are made available there.
 
 Here's the default response when running esri-ascii-parser with no parameters:
 
     richbl@main:~$ esri-ascii-parser
-
 ```
 --------------------------------------------------------------------------------
   ESRI ASCII raster data file parser (v0.10)
@@ -61,8 +67,9 @@ Examples:
 The utility responses by indicating that the -in parameter must be set to a file to be parsed (otherwise, what's the point if the input file is null, really).
 
 The output generated from the parse of the utility is managed with the -dev parameter. By default, it's set to console (i.e., -dev=con), but it can be set to multiple devices at once (e.g., -dev=con,file). Note that depending on how this parameter is set, additional parameters will need to be set.
-License
---
+
+## License
+
 The MIT License (MIT)
 
 Copyright (c) 2014 Business Learning Incorporated
