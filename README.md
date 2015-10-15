@@ -1,6 +1,9 @@
 ## Esri-ASCII-Parser
 A CLI utility written in [Go](https://golang.org/ "Go Language") to validate and parse ESRI ASCII raster data file to various devices (*i.e.*, console, file, database).
 
+An example of the how the output of this parser can be used is noted here, as a population density plot in Google Maps:
+![Google Maps Population Density Plots](https://cloud.githubusercontent.com/assets/10182110/10521011/35a57632-7322-11e5-8b4b-780dd723a55a.png "Google Maps Population Density Plots")
+
 For specific file format details, see the [ESRI ASCII raster data format specification](http://resources.esri.com/help/9.3/ArcGISDesktop/com/Gp_ToolRef/Spatial_Analyst_Tools/esri_ascii_raster_format.htm "ESRI ASCII Raster Data Format") reference.
 
 ## Requirements
